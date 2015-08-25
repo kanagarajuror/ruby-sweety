@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sweety</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="tabs1" >
+        <ul>
+        <% if user_signed_in? %>
+        <li><%= link_to new_patient_path, :class => 'navbar-link'  do %> <span>Reading</span><%end%></li> 
+         <li><%= link_to reports_index_path, :class => 'navbar-link'  do %> <span>Reports</span><%end%></li> 
+		<% else %>
+		  <li><%= link_to new_user_registration_path, :class => 'navbar-link'  do %> <span>Sign up</span><%end%></li> 
+		  <li><%= link_to new_user_session_path, :class => 'navbar-link' do %> <span>Login</span><%end%></li>
+		<% end %>
+          <!-- <li><a href="/users/sign_in"><span>Sign In</span></a></li> -->
+        </ul>
+</div>
+<div>
+ <%if notice%>
+     <p class="notice" style="color:red;width:500px;"><%= notice %></p>
+
+      <%end%>
+</div>
+<%= yield %>
+
+</body>
+</html>

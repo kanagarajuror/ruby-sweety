@@ -1,0 +1,6 @@
+<%= form_tag reports_month_to_date_result_path, method: :get do %>
+<label>Month to date wise</label>
+<%= date_select "reading","created_at"%>
+<%= hidden_field_tag :type, 2%>
+<%= submit_tag "Submit"%>
+<% end %>

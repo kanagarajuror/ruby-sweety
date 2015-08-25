@@ -1,0 +1,6 @@
+<%= form_tag reports_day_wise_result_path, method: :get do %>
+<label>Date Wise</label>
+<%= date_select "reading","created_at",start_year: 2015,end_year: Date.today.year, :disabled => true %>
+<%= hidden_field_tag :type, 1%>
+<%= submit_tag "Submit"%>
+<% end %>

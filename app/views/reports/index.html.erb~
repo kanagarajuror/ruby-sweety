@@ -1,0 +1,11 @@
+<h1>Patients Reports</h1>
+<table cellspacing="10">
+<tr>
+<td>
+<%= link_to reports_day_wise_path, :class => 'navbar-link'  do %> <span>Daily Wise</span><%end%> </td>
+<td>
+<%= link_to reports_month_to_date_path, :class => 'navbar-link'  do %> <span>Month to Date</span><%end%> </td>
+<td>
+<%= link_to reports_month_wise_path, :class => 'navbar-link'  do %> <span>Month Wise</span><%end%> </td>
+</tr>
+</table>
